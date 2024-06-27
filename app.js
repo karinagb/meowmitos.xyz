@@ -5,6 +5,6 @@ http
     res.write("Welcome to Meowmitos!");
     res.end();
   })
-  .listen(3001);
+  .listen(3000);
 
 console.log("Server started on port 3000");
