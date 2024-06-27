@@ -4,20 +4,20 @@
     <meta charset="UTF-8" />
     <title>Meowmitos</title>
     <link
-    rel="icon"
-    type="image/x-icon"
-    href="./images/favicon.ico"
-    sizes="16x16" />
+      rel="icon"
+      type="image/x-icon"
+      href="./images/favicon.ico"
+      sizes="16x16" />
   </head>
-  <head> </head>
-  <body></body>
-  <script>
+  <body>
+    <h1>Welcome to Meowmitos!</h1>>
+    <script>
+      const proto = window.location.protocol === "https:" ? "wss" : "ws";
+      const ws = new WebSocket(`${proto}://${window.location.host}`);
 
-    const proto = window.location.protocol === "https:" ? "wss" : "ws";
-    const ws = new WebSocket(`${proto}://${window.location.host}`);
-
-    ws.onmessage = (event) => {
-      console.log(event.data);
-    };
-  </script>
+      ws.onmessage = (event) => {
+        console.log(event.data);
+      };
+    </script>
+  </body>
 </html>
