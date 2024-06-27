@@ -22,9 +22,9 @@ process.on("SIGINT", () => {
 
 /** Begin Websocket */
 
-const WebsocketServer = require("ws").Server;
+const WebSocketServer = require("ws").Server;
 
-const wss = new WebsocketServer({ server: server });
+const wss = new WebSocketServer({ server: server });
 
 wss.on("connection", function connection(ws) {
   const numClients = wss.clients.size;
